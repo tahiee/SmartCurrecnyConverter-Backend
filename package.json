@@ -1,5 +1,22 @@
 {
+  "name": "node-ts",
+  "version": "0.0.0",
+  "author": "tahie",
+  "description": "Node.js & TypeScript starter",
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": ">=18.11",
+    "pnpm": ">=7.27"
+  },
+  "scripts": {
+    "dev": "pnpm /dev:.*/",
+    "dev:build": "esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
+    "dev:run": "node --inspect -r ./dist/dev.js --watch dist/src",
+    "build": "esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
+    "start": "node dist"
+  },
   "dependencies": {
+    "esbuild": "^0.23.0",
     "axios": "^1.7.7",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
@@ -11,20 +28,8 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.9.3",
+    "@types/node": "^20.14.9",
     "nodemon": "^3.1.7",
     "typescript": "^5.7.2"
-  },
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "src/index.ts",
-  "scripts": {
-    "dev": "nodemon src/index.ts",
-    "start": "node dist/index.js",
-    "build": "rimraf dist && tsc"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

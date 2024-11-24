@@ -1,17 +1,13 @@
 {
-  "compilerOptions": {
-      "module": "commonjs",
+    "compilerOptions": {
+      "allowJs": true,
       "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "target": "es6",
-      "noImplicitAny": true,
-      "moduleResolution": "node",
-      "sourceMap": true,
+      "isolatedModules": true,
+      "module": "ESNext",
+      "moduleResolution": "bundler",
       "outDir": "dist",
-      "baseUrl": ".",
-      "paths": {
-          "*": ["node_modules/*", "src/types/*"]
-      }
-  },
-  "include": ["./src/**/*"]
+      "paths": { "~/*": ["./src/*"] },
+      "target": "ESNext"
+    }
   }
+  
