@@ -7,7 +7,7 @@ import currencyRoutes from "./routes/currencies";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3009;
 
 // Middleware hai 
 app.use(cors({
