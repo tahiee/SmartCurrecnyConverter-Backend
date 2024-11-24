@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3002;
 
 // Middleware hai 
 app.use(cors({
-  origin: 'https://smconverter.vercel.app',
+  origin: '*',
   credentials: true
 }));
 app.use(bodyParser.json());
