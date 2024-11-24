@@ -3,9 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import currencyRoutes from "./routes/currencies";
-import serverless from "serverless-http";
 
-const api = express();
 dotenv.config();
 
 const app = express();
@@ -32,5 +30,3 @@ app.use((req: Request, res: Response, next: NextFunction): any => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-export const handler = serverless(api);
