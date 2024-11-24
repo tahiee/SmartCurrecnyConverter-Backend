@@ -7,11 +7,11 @@ import currencyRoutes from "./routes/currencies";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3002;
 
 // Middleware hai 
 app.use(cors({
-  origin: '*',
+  origin: 'https://smconverter.vercel.app',
   credentials: true
 }));
 app.use(bodyParser.json());
