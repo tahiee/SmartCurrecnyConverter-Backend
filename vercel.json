@@ -8,11 +8,5 @@
         "includeFiles": ["**/*.ts", "**/*.json"]
       }
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.ts"
-    }
   ]
 }
